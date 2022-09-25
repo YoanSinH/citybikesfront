@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Citybikes",
+  "name": "Frontal de Citybik.es",
+  "description": "Made by Joan Cifuentes. (yoansinh) https://github.com/YoanSinH",
   "icons": [
     {
       "src": "favicon.ico",
