@@ -1,9 +1,7 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
 import Networks from "../components/Networks";
-import Pagination from "../components/Pagination";
 import styles from "../styles/Bikes.css";
-
 
 export function Bikes() {
     const [networks,setNetworks] = useState(null);
@@ -24,19 +22,28 @@ export function Bikes() {
         }
     }, []);
 
-    if (!networks) return (<><br/><h2>Cargando</h2></>);
+    if (!networks) return (<><h2>Cargando</h2></>);
+
+    const loadData = () => {
+        setDataPerPage(dataPerPage+9);
+    }
 
     const indexLastData = currentPage * dataPerPage;
     const indexFistData = indexLastData - dataPerPage;
     const currentData = networks.slice(indexFistData, indexLastData);
-    console.log(currentData)
+    console.log(indexFistData,indexLastData, currentData)
 
     return (
         <>
+        <br/>
+        <div>
         <h1>{networks.length} Compañias </h1><p>Mostrando: {dataPerPage}</p>
-        
+        </div>
+        <br/>
+        <div>
         <Networks data={currentData} loading={loading}/>
-        <Pagination dataPerPage={dataPerPage} totalData={networks.length}/>
+        <button className="button" onClick={loadData}>Cargar más</button>
+        </div>
         </>
     )
 }

@@ -1,9 +1,15 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { Home } from './views/Home';
-import { Bikes } from './views/Bikes';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./views/Home";
+import { Bikes } from "./views/Bikes";
 
 function App() {
+  console.log(`
+█▄█ █▀█ ▄▀█ █▄░█ █▀ █ █▄░█ █░█
+░█░ █▄█ █▀█ █░▀█ ▄█ █ █░▀█ █▀█
+https://github.com/YoanSinH/
+
+`);
   return (
     <div className="App">
       <Routes>
