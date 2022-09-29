@@ -1,6 +1,8 @@
 # CityBikes Front
+Es un frontal que muestra información de las redes de bicicletas en todo el mundo.
+Puedes echar un vistaso en [https://citybikesinfo.vercel.app/](https://citybikesinfo.vercel.app/)
 ## Api
-La API usada es [http://api.citybik.es/v2/](http://api.citybik.es/v2/) una API pública.
+La API consumida es [http://api.citybik.es/v2/](http://api.citybik.es/v2/)
 ## Instalación & Ejecutar
 Después de clonar o descargar, en el directorio del proyecto ejecutar:
 `npm install`

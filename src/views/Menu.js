@@ -19,11 +19,10 @@ export function Menu() {
         <div className='container'>
             <div className="session" style={styles.session}>
                 <div className="left" style={styles.left}>
-                    .............
                 </div>
                 <div className='form'>
                     <h4 className='h4'><span>CityBikes</span></h4>
-                    <p className='p'>Información general de la API <a href='https://citybik.es' target={'_blank'}>Citybik.es</a><br />
+                    <p className='p'>Información general de las redes de bicicletas del mundo.<br />
                         <br />
                         <a href='https://github.com/YoanSinH' target={'_blank'}>› Github</a><br />
                         <a href='http://api.citybik.es/v2/' target={'_blank'}>› API</a><br />

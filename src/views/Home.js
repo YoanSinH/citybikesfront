@@ -15,7 +15,7 @@ export function Home() {
     }
     return (
         <div>
-            <Bikes/>
+            <Menu/>
         </div>
     )
 }

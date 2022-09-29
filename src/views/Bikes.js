@@ -42,7 +42,9 @@ export function Bikes() {
         <br/>
         <div>
         <Networks data={currentData} loading={loading}/>
+        <div className="load-more-div">
         <button className="button" onClick={loadData}>Cargar más</button>
+        </div>
         </div>
         </>
     )
