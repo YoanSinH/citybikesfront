@@ -1,19 +1,21 @@
 # CityBikes Front
-Es un frontal que muestra información de las redes de bicicletas en todo el mundo.
-Puedes echar un vistaso en [https://citybikesinfo.vercel.app/](https://citybikesinfo.vercel.app/)
+This is a front end that displays information on bicycle networks around the world.
+You can take a look at [https://citybikesinfo.vercel.app/](https://citybikesinfo.vercel.app/)
 ## Api
-La API consumida es [http://api.citybik.es/v2/](http://api.citybik.es/v2/)
-## Instalación & Ejecutar
-Después de clonar o descargar, en el directorio del proyecto ejecutar:
+The consumed API is [http://api.citybik.es/v2/](http://api.citybik.es/v2/)
+## Installation & Run
+After cloning or downloading, in the project directory run:
 `npm install`
-esperar que se instalen las dependencias y ejecutar:
+wait for the dependencies to be installed and run:
 `npm start`
-> Abre la app en modo desarrollo\
-> Se expone en [http://localhost:3000](http://localhost:3000) 
+> Open the app in development mode.
+> It is exposed in [http://localhost:3000](http://localhost:3000) 
 
-## Dependencias
-| Dependencia | Versión |
+## Dependencies
+| Dependency | Version |
 |--|--|
-| react | ^18.2.0 |
+| react | ^18.2.0 | |
 | axios | ^0.27.2 |
-|react-router-dom|^6.4.1 |
+| | |react-router-dom|^6.4.1 | |
+
+[Readme in 🇪🇸](https://github.com/YoanSinH/CityBikesFront/blob/main/README_es.md)
