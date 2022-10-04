@@ -1,13 +1,29 @@
 import React, {useState} from "react";
+import axios from "axios";
 import Modal from "./Modal";
 
 const Networks = ({data, loading}) => {
+    const [network, setNetwork] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
-    if(loading) return <p>Loading</p>
+    console.log("net",data,typeof(data));
+
+    function openModal(stOpen,href){
+        try {
+            let link = "http://api.citybik.es"+href
+            async function getDNetwork() {
+                const response = await axios.get(link);
+                setNetwork(response.data.network);
+                console.log("API Response, fetching to modal: ",response.status);
+            }
+            getDNetwork();
+            setIsOpen(stOpen);
+        } catch (error) {
+            console.log("Failed opening Modal:", error);
+        }
+    }
 
     return <div className="item-container">
-        <button onClick={() => setIsOpen(true)}>mod</button>
-        {isOpen && <Modal setIsOpen={setIsOpen}/>}
+        {isOpen ? (<Modal setIsOpen={setIsOpen} data={network}/>) : null}
         {data.map(networkInfo => {
             return(
                 <div className="card" key={networkInfo.id}>
@@ -15,8 +31,7 @@ const Networks = ({data, loading}) => {
                         <h4>{networkInfo.name}</h4>
                         <p>{networkInfo.location.city}</p>
                         <p>{networkInfo.location.country}</p>
-                        <button className="button">Más info</button>&nbsp;
-                        <button className="button">Mapa</button>
+                        <button className="button" onClick={() => openModal(true,networkInfo.href)}>Más info</button>
                     </div>
                 </div>
             )
