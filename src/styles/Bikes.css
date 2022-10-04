@@ -41,6 +41,10 @@
   padding-bottom: 30px;
 }
 
+.container-title{
+  padding-left: 4%;
+}
+
 /*loader*/
 .lds-facebook {
   display: inline-block;

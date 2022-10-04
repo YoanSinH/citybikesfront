@@ -21,9 +21,11 @@ const Modal = ({ setIsOpen, data }) => {
 
     for (let i in data.stations) {
         if(data.stations[i].free_bikes == null){
-            break
+            totalbikes = 0;
+        }else if(data.stations[i].empty_slots == null){
+            totalslots = 0;
         }else{
-            totalbikes =  totalbikes + data.stations[i].free_bikes
+            totalbikes = totalbikes + data.stations[i].free_bikes
             totalslots = totalslots + data.stations[i].empty_slots
         }
     }
@@ -36,7 +38,7 @@ const Modal = ({ setIsOpen, data }) => {
                     <div className="modalHeader">
                         <h5 className="heading">Información de {data.name}</h5>
                     </div>
-                    <hr></hr>
+                    
                     <button className="closeBtn" onClick={() => closed()}>X</button>
                     <div className="modalContent">
                         <p><span>Compañia</span> {data.company[0]}</p>

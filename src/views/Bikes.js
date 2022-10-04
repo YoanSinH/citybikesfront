@@ -34,7 +34,7 @@ export function Bikes() {
 
     return (
         <>
-            <div>
+            <div className="container-title">
                 <h1>{networks.length} Compañias </h1><p>Mostrando: {dataPerPage}</p>
             </div>
             <div>
