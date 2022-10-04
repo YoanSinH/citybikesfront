@@ -5,8 +5,8 @@ import styles from "../styles/Bikes.css";
 
 export function Bikes() {
     const [networks, setNetworks] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [currentPage, setcurrentPage] = useState(1);
+    const [loading] = useState(false);
+    const [currentPage] = useState(1);
     const [dataPerPage, setDataPerPage] = useState(9);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export function Bikes() {
         }
     }, []);
 
-    if (!networks) return (<><h2>Cargando</h2></>);
+    if (!networks) return (<><div class="lds-facebook"><div></div><div></div><div></div></div></>);
 
     const loadData = () => {
         setDataPerPage(dataPerPage + 9);

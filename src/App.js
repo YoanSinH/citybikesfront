@@ -14,7 +14,7 @@ https://github.com/YoanSinH/
     <div className="App">
       <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/b' element={<Bikes/>}/>
+          <Route path='/networks' element={<Bikes/>}/>
       </Routes>
     </div>
   );

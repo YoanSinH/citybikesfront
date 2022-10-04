@@ -5,7 +5,6 @@ import Modal from "./Modal";
 const Networks = ({data, loading}) => {
     const [network, setNetwork] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
-    console.log("net",data,typeof(data));
 
     function openModal(stOpen,href){
         try {

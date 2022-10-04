@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import styles from "../styles/Modal.css";
 
 const Modal = ({ setIsOpen, data }) => {
@@ -11,7 +10,16 @@ const Modal = ({ setIsOpen, data }) => {
     let totalbikes = 0;
     let totalslots = 0;
 
-    for (let i = 0; i < data.stations.length; i++) {
+    console.log("a",data);
+    
+    function closed() {
+        console.log("antes", data);
+        setIsOpen(false);
+        data = null;
+        console.log("despues", data);
+    }
+
+    for (let i in data.stations) {
         if(data.stations[i].free_bikes == null){
             break
         }else{
@@ -29,7 +37,7 @@ const Modal = ({ setIsOpen, data }) => {
                         <h5 className="heading">Información de {data.name}</h5>
                     </div>
                     <hr></hr>
-                    <button className="closeBtn" onClick={() => setIsOpen(false)}>X</button>
+                    <button className="closeBtn" onClick={() => closed()}>X</button>
                     <div className="modalContent">
                         <p><span>Compañia</span> {data.company[0]}</p>
                         <p><span>País</span> {data.location.country}</p>
@@ -44,7 +52,7 @@ const Modal = ({ setIsOpen, data }) => {
                                     var freeb = stations.free_bikes;
                                     var emplys = stations.empty_slots;
                                 }else{
-                                    var freeb = emplys = 0;
+                                    freeb = emplys = 0;
                                 }
                                 return(
                                     <div className="station" key={stations.id}>
@@ -53,7 +61,7 @@ const Modal = ({ setIsOpen, data }) => {
                                         <p><span>Bicicletas Libres</span> {stations.free_bikes === null ? msg : stations.free_bikes}</p>
                                         <p><span>Espacios Libres</span> {stations.empty_slots === null ? msg : stations.empty_slots}</p>
                                         <p><span>Total Espacios</span> {freeb+emplys}</p>
-                                        <p><a href={"http://maps.google.com/maps?q=" + stations.latitude + "," + stations.longitude} target={"_blank"}>Ver en mapa</a></p>
+                                        <p><a href={"http://maps.google.com/maps?q=" + stations.latitude + "," + stations.longitude} target={"_blank"} rel="noopener noreferrer">Ver en mapa</a></p>
                                     </div>
                                 )
                             })}

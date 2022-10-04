@@ -1,15 +1,13 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "../App.css";
-import { Bikes } from "./Bikes";
+import styles from "../styles/App.css";
 
 export function Menu() {
     const navigate = useNavigate();
-    const [pressed, setPressed] = useState(false);
 
     const changeView = () => {
         try {
-            navigate("/b")
+            navigate("/networks")
         } catch (error) {
             console.log(error)
         }
@@ -24,11 +22,11 @@ export function Menu() {
                     <h4 className='h4'><span>CityBikes</span></h4>
                     <p className='p'>Información general de las redes de bicicletas del mundo.<br />
                         <br />
-                        <a href='https://github.com/YoanSinH' target={'_blank'}>› Github</a><br />
-                        <a href='http://api.citybik.es/v2/' target={'_blank'}>› API</a><br />
+                        <a href='https://github.com/YoanSinH' target={'_blank'} rel="noopener noreferrer">› Github</a><br />
+                        <a href='http://api.citybik.es/v2/' target={'_blank'} rel="noopener noreferrer">› API</a><br />
                         <br/>
                     </p>
-                    <button className='button' type="submit" onClick={null}>Entrar</button>
+                    <button className='button' type="submit" onClick={changeView}>Entrar</button>
                 </div>
             </div>
         </div>
