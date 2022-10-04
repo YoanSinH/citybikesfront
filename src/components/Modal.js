@@ -59,7 +59,7 @@ const Modal = ({ setIsOpen, data }) => {
                                 return(
                                     <div className="station" key={stations.id}>
                                         <h3>{stations.name}</h3>
-                                        <p><span>Actualización</span> {stations.timestamp}</p>
+                                        <p><span>Actualización</span> {String(new Date(stations.timestamp))}</p>
                                         <p><span>Bicicletas Libres</span> {stations.free_bikes === null ? msg : stations.free_bikes}</p>
                                         <p><span>Espacios Libres</span> {stations.empty_slots === null ? msg : stations.empty_slots}</p>
                                         <p><span>Total Espacios</span> {freeb+emplys}</p>
