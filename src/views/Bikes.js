@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Networks from "../components/Networks";
-import styles from "../styles/Bikes.css";
+import "../styles/Bikes.css";
 
 export function Bikes() {
     const [networks, setNetworks] = useState(null);
@@ -22,7 +22,7 @@ export function Bikes() {
         }
     }, []);
 
-    if (!networks) return (<><div class="lds-facebook"><div></div><div></div><div></div></div></>);
+    if (!networks) return (<><div className="lds-facebook"><div></div><div></div><div></div></div></>);
 
     const loadData = () => {
         setDataPerPage(dataPerPage + 9);

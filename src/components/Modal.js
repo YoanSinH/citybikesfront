@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Modal.css";
+import "../styles/Modal.css";
 
 const Modal = ({ setIsOpen, data }) => {
     if (!data) return (
