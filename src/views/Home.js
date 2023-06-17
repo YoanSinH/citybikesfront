@@ -14,21 +14,23 @@ export function Home() {
     };
 
     return(
-        <div className='container'>
-            <div className="session">
-                <div className="left">
+        <main>
+            <section className="hero">
+                <div className="hero__bg">
+                    <picture>
+                        <img src="https://www.centropolismedellin.com/wp-content/uploads/2019/07/Encicla-3.jpg"/>
+                    </picture>
                 </div>
-                <div className='form'>
-                    <h4 className='h4'><span>CityBikes</span></h4>
-                    <p className='p'>Información general de las redes de bicicletas del mundo.<br />
-                        <br />
-                        <a href='https://github.com/YoanSinH' target={'_blank'} rel="noopener noreferrer">› Github</a><br />
-                        <a href='http://api.citybik.es/v2/' target={'_blank'} rel="noopener noreferrer">› API</a><br />
-                        <br/>
-                    </p>
-                    <button className='button' type="submit" onClick={changeView}>Entrar</button>
-                </div>
-            </div>
-        </div>
+                <header className="hero__cnt">
+                    <h1>CITYBIKES FRONTAL</h1>
+                    <p>Información general de las redes<br/> de bicicletas del mundo.</p>
+                    <button className="button" onClick={changeView}>Ver redes</button>
+                </header>
+                <footer className="hero__ftr">
+                    <p className="link">⚡ by <a href="https://www.citybik.es/">Citybik.es</a></p>
+                    <p className="link">👨‍💻 by <a href="https://github.com/YoanSinH/CityBikesFront">YoanSinH</a> </p>
+                </footer>
+            </section>
+        </main>
     )
 }

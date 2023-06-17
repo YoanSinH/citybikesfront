@@ -41,7 +41,7 @@ export function Bikes() {
     return (
         <>
             <div className="container-title">
-                <h1>Citybikes</h1>
+                <h1>Citybikes Información</h1>
             </div>
             <div>
                 <div className="REMOVEcontainernetworks">
