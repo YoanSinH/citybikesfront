@@ -70,25 +70,26 @@ span {
 }
 
 .button {
-  width: auto;
-  min-width: 100px;
-  border-radius: 0px;
-  text-align: center;
-  padding: 15px 40px;
-  margin-top: 5px;
-  background-color: #5B5B5B;
-  color: #fff;
+  background-color: rgba(255, 0, 179, 0.734);
+  color: #ffffff;
+  font-family: Arial;
   font-size: 14px;
-  margin-left: auto;
-  font-weight: 500;
-  box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, .13);
-  border: none;
-  outline: 0;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  padding: 12px 15px;
+  border: 0px solid #000;
+  border-radius: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .button:hover {
-  transform: translate(-0px, -4px);
+  background-color: rgba(255, 0, 179, 0.4);
+  transform: translate(-0px, -2px);
 }
 
 .session {
