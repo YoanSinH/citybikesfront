@@ -5,6 +5,7 @@ import "../styles/App.css";
 import "../styles/Bikes.css";
 
 export function Bikes() {
+    const bottomRef = React.useRef(null);
     const [networks, setNetworks] = useState(null);
     const [loading] = useState(false);
     const [currentPage] = useState(1);
@@ -27,6 +28,10 @@ export function Bikes() {
 
     const loadData = () => {
         setDataPerPage(dataPerPage + 9);
+
+        setTimeout(() => {
+            bottomRef.current.scrollIntoView({ behavior: "smooth" });
+        }, 100);
     }
 
     const indexLastData = currentPage * dataPerPage;
@@ -39,12 +44,13 @@ export function Bikes() {
                 <h1>Citybikes</h1>
             </div>
             <div>
-                <div className="containernetworks">
+                <div className="REMOVEcontainernetworks">
                 <Networks data={currentData} loading={loading} />
                 </div>
                 <div className="load-more-div">
                     <button className="button" onClick={loadData}>Cargar más</button>
                 </div>
+                <div ref={bottomRef} />
             </div>
         </>
     )
