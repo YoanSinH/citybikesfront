@@ -18,6 +18,13 @@
   background: #f3f2f2;
 }
 
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+  opacity: .85;
+}
+
 h4 {
   font-size: 24px;
   font-weight: 600;

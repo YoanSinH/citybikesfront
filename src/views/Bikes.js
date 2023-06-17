@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Networks from "../components/Networks";
+import "../styles/App.css";
 import "../styles/Bikes.css";
 
 export function Bikes() {
@@ -35,7 +36,7 @@ export function Bikes() {
     return (
         <>
             <div className="container-title">
-                <h1>Citybikes </h1><p>Mostrando: {dataPerPage}</p>
+                <h1>Citybikes</h1>
             </div>
             <div>
                 <div className="containernetworks">

@@ -25,12 +25,11 @@ const Networks = ({data, loading}) => {
         {isOpen ? (<Modal setIsOpen={setIsOpen} data={network}/>) : null}
         {data.map(networkInfo => {
             return(
-                <div className="card" key={networkInfo.id}>
+                <div className="card" key={networkInfo.id} onClick={() => openModal(true,networkInfo.href)}>
                     <div className="containercard">
                         <h4>{networkInfo.name}</h4>
                         <p>{networkInfo.location.city}</p>
                         <p>{networkInfo.location.country}</p>
-                        <button className="button" onClick={() => openModal(true,networkInfo.href)}>Más info</button>
                     </div>
                 </div>
             )
