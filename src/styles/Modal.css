@@ -21,8 +21,8 @@
 .modal {
   width: 80vw;
   height: 80vh;
+  border-radius: 12px;
   background-color: #fff;
-  background: #fff;
   color: #fff;
   z-index: 1000;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
@@ -30,6 +30,7 @@
 }
 
 .modalHeader {
+  border-radius: 12px;
   height: 50px;
   background: white;
   overflow: hidden;
@@ -38,17 +39,22 @@
 .heading {
   margin: 0;
   padding: 10px;
-  color: #2c3e50;
-  font-weight: 500;
+  color: #000;
+  font-weight: 600;
   font-size: 18px;
-  text-align: center;
+}
+
+.heading-2 {
+  margin: 0;
+  color: #000;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .modalContent {
   padding: 10px;
   font-size: 14px;
-  color: #2c3e50;
-  text-align: center;
+  color: #000;
 }
 
 .modalActions {
@@ -65,24 +71,29 @@
 }
 
 .stationsContainer {
-  height: 60%;
-  width: 98.5%;
+  height: 55%;
+  width: 99%;
   overflow-y: scroll;
   position: absolute;
-  justify-content: center;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .station {
-  padding-bottom: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 10px;
 }
 
 .closeBtn {
   cursor: pointer;
+  border-radius: 12px;
   font-weight: 500;
   padding: 4px 8px;
   border: none;
   font-size: 18px;
-  color: #2c3e50;
   background: white;
   transition: all 0.25s ease;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
@@ -90,8 +101,6 @@
   right: 0;
   top: 0;
   align-self: flex-end;
-  margin-top: -7px;
-  margin-right: -7px;
 }
 
 .closeBtn:hover {
@@ -126,7 +135,6 @@
   border-radius: 12px;
   font-size: 0.8rem;
   border: none;
-  color: #2c3e50;
   background: #fcfcfc;
   transition: all 0.25s ease;
 }

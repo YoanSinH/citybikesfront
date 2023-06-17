@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/App.css";
 import "../styles/Modal.css";
 
 const Modal = ({ setIsOpen, data }) => {
@@ -46,8 +47,8 @@ const Modal = ({ setIsOpen, data }) => {
                         <p><span>Ciudad</span> {data.location.city}</p>
                         <p><span>Ciclas disponibles</span> {totalbikes}</p>
                         <p><span>Espacios libres</span> {totalslots}</p>
-                        <br/><hr></hr>
-                        <h4 className="heading">Estaciones</h4>
+                        <br/>
+                        <h4 className="heading-2">Estaciones</h4>
                         <div className="stationsContainer">
                             {stations.map(stations => {
                                 if(stations.free_bikes != null && stations.empty_slots != null){
@@ -59,7 +60,7 @@ const Modal = ({ setIsOpen, data }) => {
                                 return(
                                     <div className="station" key={stations.id}>
                                         <h3>{stations.name}</h3>
-                                        <p><span>Actualización</span> {String(new Date(stations.timestamp))}</p>
+                                        <p><span>Actualización</span> {String(new Date(stations.timestamp).toLocaleString())}</p>
                                         <p><span>Bicicletas Libres</span> {stations.free_bikes === null ? msg : stations.free_bikes}</p>
                                         <p><span>Espacios Libres</span> {stations.empty_slots === null ? msg : stations.empty_slots}</p>
                                         <p><span>Total Espacios</span> {freeb+emplys}</p>
